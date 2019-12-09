@@ -1,0 +1,53 @@
+body {
+  background-color: #DEFFE8;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column-item {
+  display: flex;
+  padding: 16px 0px;
+}
+
+.column-center {
+  align-items: center;
+}
+
+.botfish-image {
+  width: 300px;
+  height: 200px;
+}
+
+.qrcode {
+  width: 300px;
+  height: 300px;
+}
+
+.row-item {
+  display: flex;
+  width: calc(50% - 32px);
+  padding: 0px 16px;
+}
+
+@media (max-width: 760px) {
+  .row-item {
+    display: flex;
+    width: 100%;
+    padding: 0px 16px;
+  }
+}
+
+.list-item {
+  line-height: 2;
+  font-size: 20px;
+  padding: 8px 0px;
+}

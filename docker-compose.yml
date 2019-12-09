@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  web:
+    image: botfish-website:1
+    build: .
+    ports:
+      - 6002:6002
+    restart: always
+    networks:
+      - web
+    container_name: botfish-website
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.basic.frontend.rule=Host:botfishweb.ballfish.io"
+      - "traefik.basic.port=6002"
+      - "traefik.basic.protocol=http"
+
+networks:
+  web:
+    external: true
